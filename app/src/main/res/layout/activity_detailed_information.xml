@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="se.rickylagerkvist.animals.DetailedInformationActivity"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_height="@android:dimen/thumbnail_height"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tiger"
+        android:id="@+id/animal_portrait"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tiger"
+        android:textSize="50sp"
+        android:id="@+id/animal_headline"
+        android:layout_alignBottom="@+id/animal_portrait"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:padding="16dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiger (Panthera tigris) är ett kattdjur som endast lever i Asien. Tigern är det största nu levande kattdjuret. Man delar upp de idag förekommande bestånden i sex underarter. Utöver detta känner man till tre utdöda underarter. De flesta tigrar lever i fuktig tropisk och subtropisk lövskog, men finns även i tempererade löv- och barrskogar. I denna miljö utgör pälsens mönster bra kamouflage. Källa text och bild: https://sv.wikipedia.org/wiki/Tiger;"
+        android:id="@+id/animal_description"
+        android:layout_below="@+id/animal_headline"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:padding="16dp"
+        />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:text="Share"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="true"
+        android:shadowColor="@android:color/transparent"
+        android:textColor="@android:color/holo_orange_dark"
+        android:onClick="shareAnimalInformation"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>
