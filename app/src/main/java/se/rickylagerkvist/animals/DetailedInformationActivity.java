@@ -26,7 +26,7 @@ public class DetailedInformationActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String animalToDisplay = intent.getStringExtra("animal");
 
-        // Skapa ett zoo
+        // Skapa ett Zoo
         Zoo theZoo = new Zoo();
 
         // Hämta ut ett djur
