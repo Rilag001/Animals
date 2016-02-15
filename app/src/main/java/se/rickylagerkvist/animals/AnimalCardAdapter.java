@@ -19,19 +19,22 @@ import se.rickylagerkvist.animals.Data.Zoo;
  */
 public class AnimalCardAdapter extends RecyclerView.Adapter<AnimalCardAdapter.AnimalCardViewHolder> {
 
+    // Var
     private ArrayList<Animal> animalList;
 
 
+    // Constructor
     public AnimalCardAdapter(ArrayList<Animal> animalList){
         this.animalList = animalList;
     }
 
+    // Methods
     @Override
     public int getItemCount() {
         return animalList.size();
     }
 
-    // direkt viewholder pattern
+    // ViewHolder pattern
     @Override
     public void onBindViewHolder(AnimalCardViewHolder animalCardViewHolder, int i) {
         Animal animal = animalList.get(i);
@@ -50,7 +53,7 @@ public class AnimalCardAdapter extends RecyclerView.Adapter<AnimalCardAdapter.An
         return new AnimalCardViewHolder(itemView);
     }
 
-    // Implements viewholder pattern
+    // Implements ViewHolder pattern
     public static class AnimalCardViewHolder extends RecyclerView.ViewHolder {
         private TextView vHeadLine;
         private TextView vDescription;

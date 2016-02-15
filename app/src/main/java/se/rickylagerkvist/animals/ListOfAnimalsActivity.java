@@ -27,23 +27,21 @@ public class ListOfAnimalsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_animal);
 
-        //animalList.add(new Animal(R.drawable.tiger, "Tiger", "Tiger (Panthera tigris) är ett kattdjur som endast lever i Asien. Tigern är det största nu levande kattdjuret. Man delar upp de idag förekommande bestånden i sex underarter. Utöver detta känner man till tre utdöda underarter. De flesta tigrar lever i fuktig tropisk och subtropisk lövskog, men finns även i tempererade löv- och barrskogar. I denna miljö utgör pälsens mönster bra kamouflage. Källa text och bild: https://sv.wikipedia.org/wiki/Tiger"));
-        //animalList.add(new Animal(R.drawable.bear, "Björn", "Björnar (Ursidae) är en familj av större rovdjur och som idag omfattar åtta arter som förekommer över stora delar av norra- och södra halvklotet. Björnar lever i Eurasien, Nord- och Sydamerika och de fanns tidigare även i norra Afrika. Arterna är främst allätaremed undantag av jättepandan som huvudsakligen lever av bambuskott och isbjörnen som har kött som huvudföda. Källa text och bild: https://sv.wikipedia.org/wiki/Bj%C3%B6rnar"));
-        //animalList.add(new Animal(R.drawable.uggla, "Uggla", "Ugglor (Strigidae) är en familj inom ordningen ugglefåglar (Strigiformes). Det finns nästan 200 olika arter inom 21 släkten i familjen äkta ugglor i världen. Källa text och bild: https://sv.wikipedia.org/wiki/Ugglor"));
-
         // RecyclerView
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.cardList);
         recyclerView.setHasFixedSize(true);
 
-        // Create LinearLayoutManager
+        // LinearLayoutManager
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
 
+        // PageAdapter
         AnimalCardAdapter ca = new AnimalCardAdapter(createList());
         recyclerView.setAdapter(ca);
     }
 
+    // Create ArrayList to put in AnimalCardAdapter and create nine animals
     private ArrayList createList() {
 
         ArrayList<Animal> animalList = new ArrayList<>();
@@ -66,10 +64,10 @@ public class ListOfAnimalsActivity extends AppCompatActivity {
 
 
 
-    // Klicka på knappen "explore"
+    // Button "explore"
     public void exploreAnimal(View view){
 
-        // Vilken knapp klickade vi på?
+        // Which explore button?
         String tag = view.getTag().toString();
 
         Intent intent = new Intent(this, DetailedInformationActivity.class);
@@ -77,7 +75,7 @@ public class ListOfAnimalsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // Vad som händer när man klickar på button "SHARE"
+    // Button "SHARE" tiger
     public void shareTigerInformation(View view){
 
         // Visa upp en "Toast" med att vi klickat på knappen
@@ -96,6 +94,7 @@ public class ListOfAnimalsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // Button "SHARE" Owl
     public void shareUgglaInformation(View view) {
 
         // Visa upp en "Toast" med att vi klickat på knappen
@@ -115,6 +114,7 @@ public class ListOfAnimalsActivity extends AppCompatActivity {
 
     }
 
+    // Button "SHARE" Bear
     public void shareBearInformation (View view) {
 
         // Visa upp en "Toast" med att vi klickat på knappen
