@@ -13,7 +13,6 @@ public class Animal {
 
     // Konstruktorer
     public Animal () {
-
     }
 
     public Animal(int imageId, String name, String description) {
