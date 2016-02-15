@@ -5,18 +5,9 @@ package se.rickylagerkvist.animals.Data;
  */
 public class Animal {
 
-    // instansvariabler
-    /*
-     ID i XLM
-     @drawable/image_of_panda
-     
-     ID i JAVA
-     R.drawable.image_of_panda
-    */
-
-    private int imageId;
-    private String name;
-    private String description;
+    public String name;
+    public String description;
+    public int imageId;
 
     // klassvariabler
 
@@ -26,6 +17,7 @@ public class Animal {
     }
 
     public Animal(int imageId, String name, String description) {
+
         this.imageId = imageId;
         this.name = name;
         this.description = description;

@@ -24,6 +24,11 @@ public class Zoo {
         mAnimals.add(new Animal(imageId, name, description));
     }
 
+
+    /*public ArrayList<Animal> getAnimals(){
+        return;
+    }*/
+
     public Animal getAnimal(String whitchAnimal){
 
         int index = -1;
