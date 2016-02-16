@@ -8,6 +8,7 @@ public class Animal {
     public String name;
     public String description;
     public int imageId;
+    public String exploreTAGButton;
 
     // klassvariabler
 
@@ -15,11 +16,12 @@ public class Animal {
     public Animal () {
     }
 
-    public Animal(int imageId, String name, String description) {
+    public Animal(int imageId, String exploreTAGButton, String name, String description) {
 
         this.imageId = imageId;
         this.name = name;
         this.description = description;
+        this.exploreTAGButton = exploreTAGButton;
     }
 
     public int getImageId() {
@@ -35,6 +37,7 @@ public class Animal {
     }
 
     // instansmetoder
+
 
     // klassmetoder
 }

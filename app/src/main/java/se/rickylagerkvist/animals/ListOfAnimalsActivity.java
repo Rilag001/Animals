@@ -2,23 +2,13 @@ package se.rickylagerkvist.animals;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
+import android.os.Bundle;;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.AdapterView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-import java.util.List;
-import java.util.zip.Inflater;
-
 import se.rickylagerkvist.animals.Data.Animal;
-import se.rickylagerkvist.animals.Data.Zoo;
 
 public class ListOfAnimalsActivity extends AppCompatActivity {
 
@@ -46,17 +36,13 @@ public class ListOfAnimalsActivity extends AppCompatActivity {
 
         ArrayList<Animal> animalList = new ArrayList<>();
 
-        animalList.add(new Animal(R.drawable.tiger, "Tiger", "Tiger (Panthera tigris) är ett kattdjur som endast lever i Asien. Tigern är det största nu levande kattdjuret. Man delar upp de idag förekommande bestånden i sex underarter. Utöver detta känner man till tre utdöda underarter. De flesta tigrar lever i fuktig tropisk och subtropisk lövskog, men finns även i tempererade löv- och barrskogar. I denna miljö utgör pälsens mönster bra kamouflage. Källa text och bild: https://sv.wikipedia.org/wiki/Tiger"));
-        animalList.add(new Animal(R.drawable.bear, "Björn", "Björnar (Ursidae) är en familj av större rovdjur och som idag omfattar åtta arter som förekommer över stora delar av norra- och södra halvklotet. Björnar lever i Eurasien, Nord- och Sydamerika och de fanns tidigare även i norra Afrika. Arterna är främst allätaremed undantag av jättepandan som huvudsakligen lever av bambuskott och isbjörnen som har kött som huvudföda. Källa text och bild: https://sv.wikipedia.org/wiki/Bj%C3%B6rnar"));
-        animalList.add(new Animal(R.drawable.uggla, "Uggla", "Ugglor (Strigidae) är en familj inom ordningen ugglefåglar (Strigiformes). Det finns nästan 200 olika arter inom 21 släkten i familjen äkta ugglor i världen. Källa text och bild: https://sv.wikipedia.org/wiki/Ugglor"));
+        animalList.add(new Animal(R.drawable.tiger, "Tiger", "Tiger", "Tiger (Panthera tigris) är ett kattdjur som endast lever i Asien. Tigern är det största nu levande kattdjuret. Man delar upp de idag förekommande bestånden i sex underarter. Utöver detta känner man till tre utdöda underarter. De flesta tigrar lever i fuktig tropisk och subtropisk lövskog, men finns även i tempererade löv- och barrskogar. I denna miljö utgör pälsens mönster bra kamouflage. Källa text och bild: https://sv.wikipedia.org/wiki/Tiger"));
+        animalList.add(new Animal(R.drawable.bear, "Björn", "Björn", "Björnar (Ursidae) är en familj av större rovdjur och som idag omfattar åtta arter som förekommer över stora delar av norra- och södra halvklotet. Björnar lever i Eurasien, Nord- och Sydamerika och de fanns tidigare även i norra Afrika. Arterna är främst allätaremed undantag av jättepandan som huvudsakligen lever av bambuskott och isbjörnen som har kött som huvudföda. Källa text och bild: https://sv.wikipedia.org/wiki/Bj%C3%B6rnar"));
+        animalList.add(new Animal(R.drawable.uggla, "Uggla", "Uggla","Ugglor (Strigidae) är en familj inom ordningen ugglefåglar (Strigiformes). Det finns nästan 200 olika arter inom 21 släkten i familjen äkta ugglor i världen. Källa text och bild: https://sv.wikipedia.org/wiki/Ugglor"));
 
-        animalList.add(new Animal(R.drawable.tiger, "Tiger", "Tiger (Panthera tigris) är ett kattdjur som endast lever i Asien. Tigern är det största nu levande kattdjuret. Man delar upp de idag förekommande bestånden i sex underarter. Utöver detta känner man till tre utdöda underarter. De flesta tigrar lever i fuktig tropisk och subtropisk lövskog, men finns även i tempererade löv- och barrskogar. I denna miljö utgör pälsens mönster bra kamouflage. Källa text och bild: https://sv.wikipedia.org/wiki/Tiger"));
-        animalList.add(new Animal(R.drawable.bear, "Björn", "Björnar (Ursidae) är en familj av större rovdjur och som idag omfattar åtta arter som förekommer över stora delar av norra- och södra halvklotet. Björnar lever i Eurasien, Nord- och Sydamerika och de fanns tidigare även i norra Afrika. Arterna är främst allätaremed undantag av jättepandan som huvudsakligen lever av bambuskott och isbjörnen som har kött som huvudföda. Källa text och bild: https://sv.wikipedia.org/wiki/Bj%C3%B6rnar"));
-        animalList.add(new Animal(R.drawable.uggla, "Uggla", "Ugglor (Strigidae) är en familj inom ordningen ugglefåglar (Strigiformes). Det finns nästan 200 olika arter inom 21 släkten i familjen äkta ugglor i världen. Källa text och bild: https://sv.wikipedia.org/wiki/Ugglor"));
-
-        animalList.add(new Animal(R.drawable.tiger, "Tiger", "Tiger (Panthera tigris) är ett kattdjur som endast lever i Asien. Tigern är det största nu levande kattdjuret. Man delar upp de idag förekommande bestånden i sex underarter. Utöver detta känner man till tre utdöda underarter. De flesta tigrar lever i fuktig tropisk och subtropisk lövskog, men finns även i tempererade löv- och barrskogar. I denna miljö utgör pälsens mönster bra kamouflage. Källa text och bild: https://sv.wikipedia.org/wiki/Tiger"));
-        animalList.add(new Animal(R.drawable.bear, "Björn", "Björnar (Ursidae) är en familj av större rovdjur och som idag omfattar åtta arter som förekommer över stora delar av norra- och södra halvklotet. Björnar lever i Eurasien, Nord- och Sydamerika och de fanns tidigare även i norra Afrika. Arterna är främst allätaremed undantag av jättepandan som huvudsakligen lever av bambuskott och isbjörnen som har kött som huvudföda. Källa text och bild: https://sv.wikipedia.org/wiki/Bj%C3%B6rnar"));
-        animalList.add(new Animal(R.drawable.uggla, "Uggla", "Ugglor (Strigidae) är en familj inom ordningen ugglefåglar (Strigiformes). Det finns nästan 200 olika arter inom 21 släkten i familjen äkta ugglor i världen. Källa text och bild: https://sv.wikipedia.org/wiki/Ugglor"));
+        animalList.add(new Animal(R.drawable.tiger, "Tiger", "Tiger", "Tiger (Panthera tigris) är ett kattdjur som endast lever i Asien. Tigern är det största nu levande kattdjuret. Man delar upp de idag förekommande bestånden i sex underarter. Utöver detta känner man till tre utdöda underarter. De flesta tigrar lever i fuktig tropisk och subtropisk lövskog, men finns även i tempererade löv- och barrskogar. I denna miljö utgör pälsens mönster bra kamouflage. Källa text och bild: https://sv.wikipedia.org/wiki/Tiger"));
+        animalList.add(new Animal(R.drawable.bear, "Björn", "Björn", "Björnar (Ursidae) är en familj av större rovdjur och som idag omfattar åtta arter som förekommer över stora delar av norra- och södra halvklotet. Björnar lever i Eurasien, Nord- och Sydamerika och de fanns tidigare även i norra Afrika. Arterna är främst allätaremed undantag av jättepandan som huvudsakligen lever av bambuskott och isbjörnen som har kött som huvudföda. Källa text och bild: https://sv.wikipedia.org/wiki/Bj%C3%B6rnar"));
+        animalList.add(new Animal(R.drawable.uggla, "Uggla", "Uggla","Ugglor (Strigidae) är en familj inom ordningen ugglefåglar (Strigiformes). Det finns nästan 200 olika arter inom 21 släkten i familjen äkta ugglor i världen. Källa text och bild: https://sv.wikipedia.org/wiki/Ugglor"));
 
         return animalList;
     }
